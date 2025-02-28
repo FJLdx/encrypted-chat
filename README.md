@@ -1,91 +1,91 @@
 # 🔒 Encrypted Chat
 
-Un chat cifrado con End-to-End Encryption (E2EE) basado en **Python**, utilizando **Sockets** y **SSL** para una comunicación segura entre cliente y servidor.
+A chat application with **End-to-End Encryption (E2EE)** built in **Python**, using **Sockets** and **SSL** for secure communication between client and server.
 
 ---
 
-## 🚀 Características
+## 🚀 Features
 
-- 🔐 **Cifrado SSL** para proteger las comunicaciones.
-- 🧵 **Uso de hilos** para manejar múltiples clientes simultáneamente.
-- 📜 **Interfaz gráfica (GUI)** con Tkinter en el cliente.
-- 📢 **Soporte de mensajes públicos**.
-- 👥 **Comando para listar usuarios conectados**.
-- ❌ **Manejo de desconexión de clientes**.
+- 🔐 **SSL Encryption** to secure communications.
+- 🧵 **Multithreading support** to handle multiple clients simultaneously.
+- 📜 **Graphical User Interface (GUI)** using Tkinter for the client.
+- 📢 **Public message broadcasting**.
+- 👥 **Command to list connected users**.
+- ❌ **Handles client disconnections gracefully**.
 
 ---
 
-## 🛠️ Instalación y ejecución
+## 🛠️ Installation & Execution
 
-### 1️⃣ Clonar el repositorio
+### 1️⃣ Clone the repository
 
 ```bash
 git clone git@github.com:FJLdx/encrypted-chat.git
 cd encrypted-chat
 ```
 
-### 2️⃣ Generar los certificados SSL
+### 2️⃣ Generate SSL Certificates
 
-Antes de iniciar, se deben generar los certificados SSL para establecer una conexión segura:
+Before starting, generate SSL certificates to establish a secure connection:
 
 ```bash
 openssl req -x509 -newkey rsa:4096 -keyout server-key.key -out server-cert.pem -days 365 -nodes
 ```
 
-Esto generará dos archivos:
-- `server-key.key`: Clave privada del servidor.
-- `server-cert.pem`: Certificado público.
+This will generate two files:
+- `server-key.key`: Server private key.
+- `server-cert.pem`: Public certificate.
 
-### 3️⃣ Ejecutar el servidor
+### 3️⃣ Run the Server
 
 ```bash
 python3 server.py
 ```
 
-### 4️⃣ Ejecutar el cliente
+### 4️⃣ Run the Client
 
 ```bash
 python3 client.py
 ```
 
-Se solicitará un nombre de usuario y se abrirá una ventana de chat con las siguientes opciones:
-- **Escribir y enviar mensajes**.
-- **Listar los usuarios conectados** con el botón `Listar usuarios`.
-- **Salir del chat** con el botón `Salir`.
+You will be prompted for a username, and a chat window will open with the following options:
+- **Write and send messages**.
+- **List connected users** using the `List users` button.
+- **Exit the chat** using the `Exit` button.
 
 ---
 
-## 🖥️ Uso
+## 🖥️ Usage
 
-1️⃣ Inicia el **servidor** antes que los clientes.
-2️⃣ Abre varios **clientes** en diferentes terminales o máquinas.
-3️⃣ Ingresa un nombre de usuario cuando se te solicite.
-4️⃣ ¡Empieza a chatear de manera segura! 🔏
+1️⃣ Start the **server** before any clients.
+2️⃣ Open multiple **clients** in different terminals or machines.
+3️⃣ Enter a username when prompted.
+4️⃣ Start chatting securely! 🔏
 
-### 📜 Comandos disponibles en el chat
+### 📜 Available Commands
 
-| Comando        | Descripción                          |
-|---------------|----------------------------------|
-| `!usuarios`   | Muestra los usuarios conectados. |
-
----
-
-## 📜 Código fuente
-
-El código se encuentra en los archivos:
-
-- `server.py` → Servidor del chat.
-- `client.py` → Cliente con interfaz gráfica.
-- `server-cert.pem` → Certificado SSL del servidor.
-- `server-key.key` → Clave privada del servidor.
-- `server.csr` → Solicitud de certificado.
+| Command      | Description                      |
+|-------------|----------------------------------|
+| `!usuarios` | Displays connected users.       |
 
 ---
 
-## 📜 Licencia
+## 📜 Source Code
 
-Este proyecto está bajo la licencia **MIT**, lo que permite su uso, modificación y distribución sin restricciones.
+The source code is divided into:
 
-📌 **Desarrollado por [FJLdx](https://github.com/FJLdx)**
+- `server.py` → Chat server.
+- `client.py` → Client with GUI.
+- `server-cert.pem` → Server SSL certificate.
+- `server-key.key` → Server private key.
+- `server.csr` → Certificate signing request.
+
+---
+
+## 📜 License
+
+This project is under the **MIT License**, allowing unrestricted use, modification, and distribution.
+
+📌 **Developed by [FJLdx](https://github.com/FJLdx)**
 
 
